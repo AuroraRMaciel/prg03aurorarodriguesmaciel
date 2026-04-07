@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package br.com.ifba.atividade04.view;
+package prg03aurorarodrigues.br.com.ifba.atividade04.view;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -10,14 +10,14 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author auror
  */
-public class genio extends javax.swing.JFrame {
+public class Genio extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(genio.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Genio.class.getName());
 
     /**
-     * Creates new form genio
+     * Creates new form Genio
      */
-    public genio() {
+    public Genio() {
         initComponents();
     }
 
@@ -31,20 +31,24 @@ public class genio extends javax.swing.JFrame {
     private void initComponents() {
 
         lblMensagem = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblLampada = new javax.swing.JLabel();
+        lblGenio = new javax.swing.JLabel();
         lblValor = new javax.swing.JLabel();
         spnValor = new javax.swing.JSpinner();
         btnPalpite = new javax.swing.JToggleButton();
-        lblGenio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/image/genio.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        lblMensagem.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblMensagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prg03aurorarodrigues/br/com/ifba/atividade04/image/balao250.png"))); // NOI18N
+        lblMensagem.setText("<html><center>Vou pensar em um valor<br>de <b>1 a 5</b>.<br>Tente adivinhar!</center></html>");
+        lblMensagem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/image/lampada.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        lblLampada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prg03aurorarodrigues/br/com/ifba/atividade04/image/lampada.png"))); // NOI18N
+        lblLampada.setText("jLabel2");
+
+        lblGenio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prg03aurorarodrigues/br/com/ifba/atividade04/image/genio.png"))); // NOI18N
+        lblGenio.setText("jLabel3");
 
         lblValor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblValor.setText("Valor:");
@@ -56,12 +60,6 @@ public class genio extends javax.swing.JFrame {
         btnPalpite.setText("Palpite");
         btnPalpite.addActionListener(this::btnPalpiteActionPerformed);
 
-        lblGenio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblGenio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblGenio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/image/balao250.png"))); // NOI18N
-        lblGenio.setText("<html><center>Vou pensar em um valor<br>de <b>1 a 5</b>.<br>Tente adivinhar!</center></html>\n");
-        lblGenio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,52 +68,44 @@ public class genio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblGenio, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(157, 157, 157)
-                                .addComponent(lblMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(110, 110, 110)
-                                .addComponent(btnPalpite))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(spnValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(90, 90, 90)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGap(63, 63, 63)
+                        .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(spnValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(btnPalpite)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblGenio, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLampada, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblMensagem)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblGenio, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblLampada))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(44, 44, 44)
+                                .addComponent(lblMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lblValor)
                                     .addComponent(spnValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnPalpite))
-                            .addComponent(jLabel1))
-                        .addContainerGap(50, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addGap(17, 17, 17))))
+                                .addGap(0, 14, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(lblGenio, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPalpite)))
+                .addGap(44, 44, 44))
         );
 
         pack();
@@ -126,10 +116,10 @@ public class genio extends javax.swing.JFrame {
         int valor = ThreadLocalRandom.current().nextInt(1, 6);//Gera um número aleatório maior ou igual a 1 e menor que 6 e guarda em valor
         int palpite = (int) spnValor.getValue();//Pega o palpite do JSpinner converte de objeto para inteiro e guarda em palpite
         if (valor == palpite){//Se valor aleatorio for igual ao palpite
-            lblGenio.setText("Acertou!");//lblGenio mostra a mensagem acertou
+            lblMensagem.setText("Acertou!");//lblGenio mostra a mensagem acertou
         }
         else{//Se não
-            lblGenio.setText("Errou! Eu pensei no valor "+String.valueOf(valor));//lblGenio mostra a mensagem Errou e o valor convertido de inteiro para string
+            lblMensagem.setText("Errou! Eu pensei no valor "+String.valueOf(valor));//lblGenio mostra a mensagem Errou e o valor convertido de inteiro para string
         }
     }//GEN-LAST:event_btnPalpiteActionPerformed
 
@@ -155,14 +145,13 @@ public class genio extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new genio().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Genio().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnPalpite;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblGenio;
+    private javax.swing.JLabel lblLampada;
     private javax.swing.JLabel lblMensagem;
     private javax.swing.JLabel lblValor;
     private javax.swing.JSpinner spnValor;

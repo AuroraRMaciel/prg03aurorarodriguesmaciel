@@ -36,68 +36,36 @@ public class calculadora_idade extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         lblAno.setText("Ano de nascimento:");
+        getContentPane().add(lblAno);
+        lblAno.setBounds(78, 38, 105, 16);
 
         spnAno.setModel(new javax.swing.SpinnerNumberModel(1989, 1900, 2026, 1));
+        getContentPane().add(spnAno);
+        spnAno.setBounds(222, 32, 89, 22);
 
         btnCalcular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prg03aurorarodriguesmaciel/br/com/ifba/image/calculadora.png"))); // NOI18N
         btnCalcular.setText("Calcular");
         btnCalcular.addActionListener(this::btnCalcularActionPerformed);
+        getContentPane().add(btnCalcular);
+        btnCalcular.setBounds(134, 146, 108, 39);
 
         lblIdade.setText("Idade:");
+        getContentPane().add(lblIdade);
+        lblIdade.setBounds(78, 210, 37, 16);
 
         lblResultado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblResultado.setForeground(new java.awt.Color(255, 0, 0));
         lblResultado.setText("0");
+        getContentPane().add(lblResultado);
+        lblResultado.setBounds(152, 203, 37, 25);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prg03aurorarodriguesmaciel/br/com/ifba/image/pessoa.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblAno)
-                                .addGap(39, 39, 39)
-                                .addComponent(spnAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(94, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCalcular)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(spnAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblAno))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(btnCalcular))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIdade)
-                    .addComponent(lblResultado))
-                .addGap(75, 75, 75))
-        );
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(274, 117, 76, 80);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
