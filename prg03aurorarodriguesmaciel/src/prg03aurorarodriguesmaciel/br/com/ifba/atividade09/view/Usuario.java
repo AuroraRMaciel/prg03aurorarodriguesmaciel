@@ -30,7 +30,6 @@ public class Usuario {
         this.setAtivo(a);
     }
     
-    //Metodo toString
     @Override
     public String toString(){
         return ("Usuario [" + "perfil = " + this.getPerfil() + 
