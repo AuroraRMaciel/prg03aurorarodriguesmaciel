@@ -28,26 +28,31 @@ public class CursoListar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        lblPesquisar = new javax.swing.JLabel();
+        txtPesquisar = new javax.swing.JTextField();
+        btnAdicionar = new javax.swing.JButton();
+        btnHomescreen = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblMostrar = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/curso/image/pesquisar.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        lblPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/curso/image/pesquisar.png"))); // NOI18N
+        lblPesquisar.setText("jLabel2");
+        getContentPane().add(lblPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 20, 37, -1));
 
-        jTextField1.setText("Pesquisar...");
+        txtPesquisar.setText("Pesquisar...");
+        getContentPane().add(txtPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 24, 86, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/curso/image/adicionar.png"))); // NOI18N
+        btnAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/curso/image/adicionar.png"))); // NOI18N
+        getContentPane().add(btnAdicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 20, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/curso/image/telaInicial.png"))); // NOI18N
-        jButton3.setText("Homescreen");
+        btnHomescreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/curso/image/telaInicial.png"))); // NOI18N
+        btnHomescreen.setText("Homescreen");
+        getContentPane().add(btnHomescreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 20, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblMostrar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -59,41 +64,9 @@ public class CursoListar extends javax.swing.JFrame {
                 "NOME", "QUANTIDADE", "DESCRIÇÃO", "FORNECEDOR", "REMOVER", "EDITAR"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblMostrar);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(28, 28, 28))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 491, 283));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -124,11 +97,11 @@ public class CursoListar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnAdicionar;
+    private javax.swing.JButton btnHomescreen;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblPesquisar;
+    private javax.swing.JTable tblMostrar;
+    private javax.swing.JTextField txtPesquisar;
     // End of variables declaration//GEN-END:variables
 }
